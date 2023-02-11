@@ -1,0 +1,12 @@
+source .venv/bin/activate
+git submodule update --recursive
+
+cd dry/
+colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+cd ../
+source workon
+
+cd wet/
+colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+cd ../
+source workon
