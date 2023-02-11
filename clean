@@ -1,3 +1,4 @@
+#!/bin/bash
 cd dry/
 rm -rf build install log
 cd ../wet
