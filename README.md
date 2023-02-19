@@ -37,7 +37,7 @@ pip install colcon-common-extensions
 For python scripts, run-time dependencies can be installed using `pip`. Make sure
 the virtual environment created above is active.
 ```
-pip install numpy scikit-learn matplotlib termcolor
+pip install numpy cprint
 ```
 
 ## Build and Install
