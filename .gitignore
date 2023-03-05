@@ -6,3 +6,4 @@ wet/install
 wet/log
 venv
 .venv
+.vscode
