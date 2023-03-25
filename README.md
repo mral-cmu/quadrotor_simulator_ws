@@ -69,6 +69,7 @@ Several tutorials and API details are provided in the documentation as detailed 
 ```
 cd wet/src/quadrotor_simulator_py/unittest
 curl -L https://cmu.box.com/shared/static/tby767h8vzzbwo45bo76i1t9qjf144kw.bag --output data/rocky0704_minimal.bag
+curl -L https://cmu.box.com/s/s03tfplape4wjckkbcc4idai39dtzuox --output unittest/rocky0704_minimal_v2.bag
 python TestQuadrotorModel.py
 ```
 
