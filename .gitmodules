@@ -4,3 +4,6 @@
 [submodule "wet/src/quadrotor_simulator_py"]
 	path = wet/src/quadrotor_simulator_py
 	url = git@github.com:rislab/quadrotor_simulator_py.git
+[submodule "wet/src/rosbags_tools"]
+	path = wet/src/rosbags_tools
+	url = git@github.com:rislab/rosbags_tools.git

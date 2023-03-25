@@ -64,10 +64,12 @@ in `quadrotor_simulator_py` submodule.
 
 Several tutorials and API details are provided in the documentation as detailed next.
 
-### Quick Test
+### Quick Test (Quadrotor Model, Dynamics, and Control)
 
 ```
-TODO
+cd wet/src/quadrotor_simulator_py/unittest
+curl -L https://cmu.box.com/shared/static/tby767h8vzzbwo45bo76i1t9qjf144kw.bag --output data/rocky0704_minimal.bag
+python TestQuadrotorModel.py
 ```
 
 The output should look like the following:
