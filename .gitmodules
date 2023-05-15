@@ -13,6 +13,3 @@
 [submodule "wet/src/quadrotor_msgs"]
 	path = wet/src/quadrotor_msgs
 	url = git@github.com:rislab/quadrotor_msgs.git
-[submodule "wet/src/ros2_numpy"]
-	path = wet/src/ros2_numpy
-	url = git@github.com:kshitijgoel007/ros2_numpy.git
