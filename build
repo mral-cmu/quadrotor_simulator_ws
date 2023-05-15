@@ -1,10 +1,40 @@
 #!/bin/bash
-cd dry/
-colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
-cd ../
-source workon
 
-cd wet/
-colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
-cd ../
-source workon
+unameOut="$(uname -s)"
+case "${unameOut}" in
+    Linux*)     machine=Linux;;
+    Darwin*)    machine=Mac;;
+    CYGWIN*)    machine=Cygwin;;
+    MINGW*)     machine=MinGw;;
+    *)          machine="UNKNOWN:${unameOut}"
+esac
+
+if [[ $machine == "Linux" ]]
+then
+  echo "Detected ${machine} environment. Building."
+  cd dry/
+  colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+  cd ../
+  source workon
+
+  cd wet/
+  colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+  cd ../
+  source workon
+fi
+
+if [[ $machine == "Mac" ]]
+then
+  echo "Detected ${machine} environment. This will not build the ROS2 packages."
+  cd dry/
+  colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+  cd ../
+  source workon
+
+  cd wet/
+  touch src/quadrotor_msgs/COLCON_IGNORE
+  touch src/quadrotor_simulator_ros/COLCON_IGNORE
+  colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+  cd ../
+  source workon
+fi
