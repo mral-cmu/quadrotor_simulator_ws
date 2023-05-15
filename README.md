@@ -64,19 +64,40 @@ in `quadrotor_simulator_py` submodule.
 
 Several tutorials and API details are provided in the documentation as detailed next.
 
-### Quick Test (Quadrotor Model, Dynamics, and Control)
-
+## Data Download
+Download data
+```python
+source .venv/bin/activate
+cd data
+pip install gdown
+python download.py
 ```
+
+## Run Simulation Stack
+```python
 cd wet/src/quadrotor_simulator_py/unittest
-curl -L https://cmu.box.com/shared/static/tby767h8vzzbwo45bo76i1t9qjf144kw.bag --output data/rocky0704_minimal.bag
-curl -L https://cmu.box.com/s/s03tfplape4wjckkbcc4idai39dtzuox --output unittest/rocky0704_minimal_v2.bag
+```
+Then run the tests in the following packages.
+
+### Test Quadrotor Model
+```python
 python TestQuadrotorModel.py
 ```
 
-The output should look like the following:
+### Test Position Controller
+```python
+python TestPositionControllerPD.py
+```
 
-TODO
+### Test Attitude Controller
+```python
+python TestAttitudeControllerPD.py
+```
 
+### Test Quadrotor Dynamics and Control
+```python
+python TestQuadrotorDynamicsControl.py
+```
 ## Documentation
 We provide documentation at three levels:
 TODO
