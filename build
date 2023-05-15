@@ -11,7 +11,7 @@ esac
 
 if [[ $machine == "Linux" ]]
 then
-  echo "Detected ${machine} environment. Building."
+  echo "Detected ${machine} environment. Building with ROS2 support."
   cd dry/
   colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
   cd ../
@@ -36,5 +36,4 @@ then
   touch src/quadrotor_simulator_ros/COLCON_IGNORE
   colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
   cd ../
-  source workon
 fi
