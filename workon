@@ -8,6 +8,10 @@ if [ -d ./venv ]; then
     source ./venv/bin/activate
 fi
 
+if [ -d ./.venv ]; then
+    source ./.venv/bin/activate
+fi
+
 if [ -f $DRY_INSTALL_DIR/setup.sh ]; then
     source $DRY_INSTALL_DIR/setup.sh
     for f in ./dry/install/*; do
