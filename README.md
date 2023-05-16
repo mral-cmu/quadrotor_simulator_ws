@@ -8,15 +8,12 @@ This repository is a `colcon` workspace. You can learn more about
 
 The `wet` folder contains git submodules under active development.
 1. `quadrotor_simulator_py`: Python codebase with C++ bindings
+2. `quadrotor_simulator_ros`: ROS2 interface for `quadrotor_simulator_py` (only for Ubuntu)
 
 The `dry` folder contains git submodules for third party dependencies.
-1.
+1. `eigen_colcon`: A getter for the Eigen library
 
 ## Quick Start
-### Machines
-This codebase has been tested on:
-
-1. MacBook Pro (16-inch, 2019): 2.4 GHz 8-Core Intel Core i9 processor, 64 GB 2667 MHz DDR4 RAM, MacOS Catalina v10.15.7.
 
 ### Pre-requisites
 #### Compile-Time Dependencies
@@ -41,28 +38,17 @@ pip install numpy cprint scipy progressbar matplotlib rosbags future
 ```
 
 ## Build and Install
-We depend on a specific version of `Eigen`. For convenience, a
-separate `colcon` workspace is provided that can be utilized as
-follows:
+To build, simply run:
+
+```bash
+./build
 ```
-cd dry
-colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release
-cd ..
+
+To use the codebase, run:
+
+```bash
 source workon
 ```
-You will observe that `eigen_colcon` is built.
-
-Now we switch back to `wet` and compile our target codebase.
-```
-cd wet
-colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release
-cd ..
-source workon
-```
-You should now be ready to use our API in `ipython` or run the scripts provided
-in `quadrotor_simulator_py` submodule.
-
-Several tutorials and API details are provided in the documentation as detailed next.
 
 ## Data Download
 Download data
@@ -98,11 +84,13 @@ python TestAttitudeControllerPD.py
 ```python
 python TestQuadrotorDynamicsControl.py
 ```
-## Documentation
-We provide documentation at three levels:
-TODO
 
-Instructions to compile the documentation locally are as follows.
+### Visualization via ROS2
+Follow installation for ROS2 here: https://docs.ros.org/en/foxy/Installation.html
+
+```bash
+ros2 launch quadrotor_simulator_ros main.xml
+```
 
 ## Authors
 Wennie Tabib, Kshitij Goel

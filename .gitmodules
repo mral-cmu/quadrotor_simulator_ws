@@ -10,3 +10,6 @@
 [submodule "wet/src/quadrotor_simulator_ros"]
 	path = wet/src/quadrotor_simulator_ros
 	url = git@github.com:rislab/quadrotor_simulator_ros.git
+[submodule "wet/src/quadrotor_msgs"]
+	path = wet/src/quadrotor_msgs
+	url = git@github.com:rislab/quadrotor_msgs.git

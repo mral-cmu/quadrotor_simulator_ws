@@ -7,3 +7,4 @@ wet/log
 venv
 .venv
 .vscode
+*.bag
