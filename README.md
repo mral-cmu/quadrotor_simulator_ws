@@ -59,6 +59,13 @@ pip install gdown
 python download.py
 ```
 
+## Adding Your Homework Solutions to the Sandbox
+Copy your assignment1-handout into `wet/src` using the following command
+
+```
+cp -r assignment1-handout quadrotor_simulator_ws/wet/src/quadrotor_simulator_py
+```
+
 ### Visualization via ROS2
 Follow installation for ROS2 here: https://docs.ros.org/en/foxy/Installation.html
 
