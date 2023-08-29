@@ -1,9 +1,6 @@
 [submodule "dry/src/eigen_colcon"]
 	path = dry/src/eigen_colcon
 	url = git@github.com:mral-cmu/eigen_colcon.git
-[submodule "wet/src/quadrotor_simulator_py"]
-	path = wet/src/quadrotor_simulator_py
-	url = git@github.com:rislab/quadrotor_simulator_py.git
 [submodule "wet/src/quadrotor_simulator_ros"]
 	path = wet/src/quadrotor_simulator_ros
 	url = git@github.com:mral-cmu/quadrotor_simulator_ros.git
