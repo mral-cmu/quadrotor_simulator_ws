@@ -1,4 +1,4 @@
-[![Quadrotor Simulator Visualization](./data/viz.mov)](./data/viz.mov)
+[![Quadrotor Simulator Visualization](./data/viz.mp4)](./data/viz.mp4)
 
 # Quadrotor Simulator Workspace
 
