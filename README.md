@@ -1,3 +1,5 @@
+[![Quadrotor Simulator Visualization](./data/viz.mov)](./data/viz.mov)
+
 # Quadrotor Simulator Workspace
 
 This codebase contains the implementation for a quadrotor simulator.
