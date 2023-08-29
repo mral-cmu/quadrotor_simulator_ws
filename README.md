@@ -1,4 +1,4 @@
-[![Quadrotor Simulator Visualization](./data/viz.mp4)](./data/viz.mp4)
+https://github.com/mral-cmu/quadrotor_simulator_ws/assets/7077226/34a123f2-6f08-4636-9f89-dbab264a96df
 
 # Quadrotor Simulator Workspace
 
