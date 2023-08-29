@@ -7,7 +7,7 @@ This repository is a `colcon` workspace. You can learn more about
 `colcon` [here](https://colcon.readthedocs.io/en/released/).
 
 The `wet` folder contains git submodules under active development.
-1. `quadrotor_simulator_py`: Python codebase with C++ bindings
+1. `quadrotor_msgs: Custom messages for quadrotors
 2. `quadrotor_simulator_ros`: ROS2 interface for `quadrotor_simulator_py` (only for Ubuntu)
 
 The `dry` folder contains git submodules for third party dependencies.
@@ -34,7 +34,7 @@ pip install colcon-common-extensions
 For python scripts, run-time dependencies can be installed using `pip`. Make sure
 the virtual environment created above is active.
 ```
-pip install numpy cprint scipy progressbar matplotlib rosbags future
+pip install numpy cprint scipy progressbar matplotlib rosbags future lark
 ```
 
 ## Build and Install
@@ -59,38 +59,21 @@ pip install gdown
 python download.py
 ```
 
-## Run Simulation Stack
-```python
-cd wet/src/quadrotor_simulator_py/unittest
-```
-Then run the tests in the following packages.
-
-### Test Quadrotor Model
-```python
-python TestQuadrotorModel.py
-```
-
-### Test Position Controller
-```python
-python TestPositionControllerPD.py
-```
-
-### Test Attitude Controller
-```python
-python TestAttitudeControllerPD.py
-```
-
-### Test Quadrotor Dynamics and Control
-```python
-python TestQuadrotorDynamicsControl.py
-```
-
 ### Visualization via ROS2
 Follow installation for ROS2 here: https://docs.ros.org/en/foxy/Installation.html
 
 ```bash
 ros2 launch quadrotor_simulator_ros main.xml
 ```
+
+If you encounter issues, open a new terminal, and then run the following:
+```
+./clean
+source .venv/bin/activate
+./build
+source workon
+```
+and then launch the node.
 
 ## Authors
 Wennie Tabib, Kshitij Goel
